@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('/ponta.png') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.container, .verify-container {
+  background: rgba(30, 30, 30, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 90%;
+  max-width: 350px;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #cccccc;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #444444;
+  border-radius: 8px;
+  font-size: 1em;
+  background: #2a2a2a;
+  color: #ffffff;
+}
+
+input::placeholder {
+  color: #888888;
+}
+
+button {
+  background: #333333;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #4d4d4d;
+}
+
+button:disabled {
+  background: #666666;
+  cursor: not-allowed;
+}
+
+#status, #verifyStatus {
+  margin-top: 15px;
+  color: #bbbbbb;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  font-size: 1em;
+  color: #cccccc;
+}
+
+.checkbox-container input {
+  display: none;
+}
+
+.checkbox-container .checkmark {
+  width: 20px;
+  height: 20px;
+  background: #2a2a2a;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-container input:checked + .checkmark::after {
+  content: '✔';
+  color: #ffffff;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+@media (max-width: 600px) {
+  .container, .verify-container {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 0.9em;
+  }
+  button {
+    font-size: 0.9em;
+    padding: 10px 15px;
+  }
+}
